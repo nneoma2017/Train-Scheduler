@@ -85,10 +85,10 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
    console.log(trainTime);
    console.log(trainFrequency);
 
-   //get current train time amd frequency
+   //get current train time amd frequency. use moments to convert to proper librbary
 
    var current = moment();
-   var trainTimePretty = moment.unix(trainTime).format("MM/DD/YY");
+   varc currentTrainTime = moment.unix(trainTime).format("MM/DD/YY");
   
   $("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDes+ "</td><td>" +
   trainTime + "</td><td>" + trainFrequency);
